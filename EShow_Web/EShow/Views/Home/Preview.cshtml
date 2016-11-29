@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Preview";
+    Layout = "~/Views/Shared/_LayoutH5.cshtml";
+}
+@model EShow.Models.WebApp
+<!--这里的代码可以直接预览-->
+<div class="phonescreen" id="phonescreen" style="width:100%;max-width:520px;margin:0 auto;">
+	@Html.Raw(HttpUtility.UrlDecode(Model.PreviewHTML))
+</div>
+@section script
+{
+<script src="/content/js/fullPage.js" type="text/javascript"></script>
+<script src="/content/js/preview.js"></script>
+}
+
+
